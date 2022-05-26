@@ -13,7 +13,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
@@ -22,7 +21,7 @@
                <children>
                   <HBox layoutX="476.0" layoutY="116.0" spacing="40.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Search" />
+                        <Button fx:id="searchEmpBtn" mnemonicParsing="false" onAction="#searchEmployee" text="Search" />
                         <Button mnemonicParsing="false" text="Update" />
                         <Button mnemonicParsing="false" text="Delete" />
                      </children>
@@ -49,11 +48,11 @@
                   <TableView fx:id="employeeTable" editable="true" layoutX="295.0" layoutY="286.0" prefHeight="214.0" prefWidth="499.0" tableMenuButtonVisible="true">
                     <columns>
                       <TableColumn fx:id="empIdColumn" prefWidth="75.0" text="Id" />
-                      <TableColumn prefWidth="75.0" text="Name" />
-                        <TableColumn prefWidth="75.0" text="LastName" />
-                        <TableColumn prefWidth="75.0" text="Email" />
-                        <TableColumn prefWidth="75.0" text="Phone" />
-                        <TableColumn prefWidth="75.0" text="HireDate" />
+                      <TableColumn fx:id="empNameColumn" prefWidth="75.0" text="Name" />
+                        <TableColumn fx:id="empLastNameColumn" prefWidth="75.0" text="LastName" />
+                        <TableColumn fx:id="empEmailColumn" prefWidth="75.0" text="Email" />
+                        <TableColumn fx:id="empPhoneNumberColumn" prefWidth="75.0" text="Phone" />
+                        <TableColumn fx:id="empHireDateColumn" prefWidth="75.0" text="HireDate" />
                     </columns>
                   </TableView>
                   <HBox layoutX="476.0" layoutY="52.0" spacing="30.0">

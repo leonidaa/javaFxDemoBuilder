@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.scenebuilderproba.javafxdemobuilder/com.scenebuilderproba.javafxdemobuilder.HelloApplication
+                                com.scenebuilderproba.javafxdemobuilder/com.scenebuilderproba.javafxdemobuilder.MainApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

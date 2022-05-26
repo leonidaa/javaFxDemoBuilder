@@ -6,14 +6,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
+
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
-import java.io.IOException;
-public class HelloApplication extends Application {
+
+public class MainApplication extends Application {
 
         //This is our PrimaryStage (It contains everything)
         private Stage primaryStage;
@@ -35,7 +32,7 @@ public class HelloApplication extends Application {
             try {
                 //First, load root layout from RootLayout.fxml
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(HelloApplication.class.getResource("RootLayout.fxml"));
+                loader.setLocation(MainApplication.class.getResource("RootLayout.fxml"));
                 rootLayout = (BorderPane) loader.load();
                 //Second, show the scene containing the root layout.
                 Scene scene = new Scene(rootLayout); //We are sending rootLayout to the Scene.
@@ -49,9 +46,9 @@ public class HelloApplication extends Application {
         //Shows the employee operations view inside the root layout.
         public void showEmployeeOperationsView() {
             try {
-                //First, load EmployeeOperationsView from EmployeeOperations.fxml
+                //First, load EmployeeOperationsView from EmployeeView.fxml
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(HelloApplication.class.getResource("EmployeeOperations.fxml"));
+                loader.setLocation(MainApplication.class.getResource("EmployeeView.fxml"));
                 AnchorPane employeeOperationsView = (AnchorPane) loader.load();
                 // Set Employee Operations view into the center of root layout.
                 rootLayout.setCenter(employeeOperationsView);
